@@ -173,6 +173,45 @@ namespace elsovalodicsharpprojekt
             Console.WriteLine(szoveg.ToUpper());
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine(szoveg.Substring(3, 9));*/
+
+            /* 15. feladat:
+            Console.WriteLine("Kérem a pozitív egész számot: ");
+            int bemenoszam = Convert.ToInt32(Console.ReadLine());
+            1. megoldás:
+            string kiiratas = "";
+
+            for (int i = 1; i < bemenoszam; i++)
+            {
+                kiiratas += i + " ";
+            }
+
+            Console.WriteLine(kiiratas);
+            2. megoldás: 
+            for (int i = 1; i < bemenoszam; i++)
+            {
+                Console.Write(i + " ");
+            }*/
+
+            /*int i = 1;
+
+           Előltesztelő ciklus
+             while (i < bemenoszam)
+            {
+                Console.Write(i++ + " ");
+                //i = i + 1;
+                //i += 1;
+                //i++;
+
+            }
+            */
+            /*Hátultesztelő ciklus
+            do
+            {
+                Console.Write(i++ + " ");
+            } while (i < bemenoszam)
+            */
+            Console.ReadKey(true);
+
         }
     }
 }
