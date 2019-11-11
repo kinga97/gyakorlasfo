@@ -208,10 +208,222 @@ namespace elsovalodicsharpprojekt
             do
             {
                 Console.Write(i++ + " ");
-            } while (i < bemenoszam)
+            } while (i < bemenoszam);
             */
+
+
+            /* 16. feladat:
+            Console.WriteLine("Kérem a pozitív egész számot: ");
+            int bemenoszam = Convert.ToInt32(Console.ReadLine());
+
+             1. megoldás:
+              string kiiratas = "";
+
+             for (int i = 1; i < bemenoszam; i++)
+             {
+                 kiiratas += i + "\n"; //\n jelöli a sortörést
+             }
+
+             Console.WriteLine(kiiratas);*/
+            /* 2. megoldás
+           for (int i = 1; i < bemenoszam; i++)
+           {
+               Console.WriteLine(i + "");
+           }
+           */
+            /*int i = 1;
+
+            Előltesztelő ciklus
+             while (i < bemenoszam)
+            {
+                Console.WriteLine(i++ + "");
+                //i = i + 1;
+                //i += 1;
+                //i++;
+
+            }*/
+
+            /*Hátultesztelő ciklus
+            do
+            {
+                Console.WriteLine(i++ + "");
+            } while (i < bemenoszam);*/
+
+            /* 17. feladat:
+
+            Console.WriteLine("Kérem a pozitív egész számot: ");
+            int bemenoszam = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine($"{bemenoszam} egész osztói: ");
+
+            1. megoldás:
+             for (int i = 1; i < bemenoszam; i++)
+            {
+                if (bemenoszam % i == 0)
+                {
+                    Console.WriteLine(i);
+                }
+            }
+
+            2. megoldás: 
+            int i = 1;
+
+            while (i <= bemenoszam)
+            {
+                if (bemenoszam % i == 0) {
+                    Console.WriteLine(i);
+                }
+                i++;
+            }*/
+
+            /* Plusz feladat: Pozitív szám prím-e? és 18. feladat:
+            Console.WriteLine("Kérem a pozitív egész számot: ");
+            int bemenoszam = Convert.ToInt32(Console.ReadLine());
+
+            int szamlalo = 0;
+            int osztokosszege = 0;
+
+            for (int i = 1; i < bemenoszam + 1; i++)
+            {
+                if (bemenoszam % i == 0) {
+                    szamlalo++;
+                    osztokosszege += i;
+                }
+            }
+
+            if (szamlalo == 2)
+            {
+                Console.WriteLine($"A bemenő szám {bemenoszam} prím.");
+                Console.WriteLine($"A bemenő szám {bemenoszam} osztóinak összege: {osztokosszege}.");
+            }
+            else
+            {
+                Console.WriteLine($"A bemenő szám {bemenoszam} nem prím.");
+                Console.WriteLine($"A bemenő szám {bemenoszam} osztóinak összege: {osztokosszege}.");
+            }*/
+
+            /*19. feladat:
+            Console.WriteLine("Kérem a pozitív egész számot: ");
+            int bemenoszam = Convert.ToInt32(Console.ReadLine());
+
+            int osztokosszege = 0;
+
+            int i = 0;
+
+            while (i < bemenoszam)
+            {
+                if (bemenoszam % i == 0) // itt valami rossz
+                {
+                    osztokosszege += 0;
+                }
+                i++;
+            }
+
+            if (osztokosszege == bemenoszam) {
+                Console.WriteLine($"A szám {bemenoszam} tökéletes szám.");
+            }
+            else
+            {
+                Console.WriteLine($"A szám {bemenoszam} nem tökéletes szám.");
+            }
+            */
+
+            /* 20. feladat:
+            int alap = -1;
+            while (alap <= 0 || alap >= 10)
+            {
+                Console.WriteLine("Kérem az alapot: ");
+                alap = Convert.ToInt32(Console.ReadLine());
+            }
+
+            int kitevo = -1;
+            while (kitevo <= 0 || kitevo >= 10)
+            {
+                Console.WriteLine("Kérem a kitevőt: ");
+                kitevo = Convert.ToInt32(Console.ReadLine());
+            }
+            
+            int hatvany = 1;
+
+            for (int i = 0; i < kitevo; i++)
+            {
+                hatvany *= alap;
+            }
+            Console.Write($"A hatvány: {hatvany}");*/
+
+            /* 21. feladat:
+            int szam = 0;
+            while (szam <= 0)
+            {
+                Console.Write("Kérek egy pozitív egész számot: ");
+                szam = Convert.ToInt32(Console.ReadLine());
+            }*/
+            /* Plusz feladat:
+            int szam = 1;
+            while (szam % 2 == 1 || szam % 2 == -1)
+            {
+                Console.Write("Kérek egy pozitív egész számot: ");
+                szam = Convert.ToInt32(Console.ReadLine());
+            }*/
+
+
+
+
+            /* Plusz feladat: Prímszámra lépjen ki a ciklusból.
+
+            int szam = 3;
+
+            while (primszamE(szam))
+            {
+                Console.Write("Kérek egy nem prím számot: ");
+                szam = Convert.ToInt32(Console.ReadLine());
+            }*/
+
+            //22. feladat:
+            int szam = 0;
+
+            int osszeg = 0;
+            while (szam <= 10)
+            {
+                
+                Console.WriteLine("Kérek egy 10-nél kisebb egész számot: ");
+                szam = Int32.Parse(Console.ReadLine());
+                if (szam <= 10)
+                {
+                    osszeg += szam;
+                    Console.WriteLine($"Az eddig beolvasott megfelelő számok összege: {osszeg}. ");
+                }
+                else
+                {
+                    Console.WriteLine("Nem megfelelő szám.");
+                    break;
+                }
+                Console.WriteLine($"A beolvasott számok összege: {osszeg}.");
+
+            }
+
+            
             Console.ReadKey(true);
 
+        }
+        static bool primszamE(int szam)
+        {
+            bool teljesul = true;
+            int osztokSzama = 0;
+            for (int i = 1; i <= szam; i++)
+            {
+                if (szam % i == 0) {
+                    osztokSzama++;
+                }
+            }
+            if (osztokSzama == 2)
+            {
+                return teljesul;
+            }
+            else
+            {
+                return !teljesul;
+            }
         }
     }
 }
