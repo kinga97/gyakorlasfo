@@ -753,7 +753,7 @@ namespace elsovalodicsharpprojekt
                 {
                     Console.Write((char)j);
                 }
-                for (int k = 65 + i; k < 65; k++)
+                for (int k = 65; k < 65 + i; k++)
                 {
                     Console.Write((char)k);
                 }
